@@ -132,12 +132,12 @@ public class HoughRectas {
         BufferedImage imagen = new BufferedImage(ancho, alto, BufferedImage.TYPE_3BYTE_BGR);
 
         // Obtener el arreglo de bytes de la imagen de OpenCV
-        byte[] data = new byte[ancho * alto * (int) mat.elemSize()];
-        mat.get(0, 0, data);
+        byte[] dato = new byte[ancho * alto * (int) mat.elemSize()];
+        mat.get(0, 0, dato);
 
         // Establecer los datos de píxeles en la imagen de BufferedImage
         WritableRaster raster = imagen.getRaster();
-        raster.setDataElements(0, 0, ancho, alto, data);
+        raster.setDataElements(0, 0, ancho, alto, dato);
 
         return imagen;
     }
