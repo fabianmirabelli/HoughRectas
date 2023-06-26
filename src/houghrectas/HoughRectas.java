@@ -102,6 +102,7 @@ public class HoughRectas {
                 frame.pack();
                // Guardar la imagen con líneas detectadas
                 Imgcodecs.imwrite("imagen_con_lineas.jpg", imagenConLineas);
+                Imgcodecs.imwrite("imagen_contono.jpg", bordes);
             }
         });
 
